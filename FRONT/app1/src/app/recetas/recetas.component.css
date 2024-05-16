@@ -1,0 +1,25 @@
+
+
+#nombre{
+    color: white;
+    font-size: 40px;
+
+}
+
+#tipo{
+    font-size: 20px;
+}
+
+#contenedorFondo {
+    margin-top: 5%;
+    background-color: rgba(0, 0, 0, 0.452);
+    padding: 2%;
+    border-radius: 2%;
+    width: 50%;
+}
+
+#plato {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}

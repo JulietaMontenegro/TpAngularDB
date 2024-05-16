@@ -1,0 +1,18 @@
+    <div class="conjunto">
+    <div class="recipe-card"  *ngFor= " let plato of platos ">
+        <h2 class="recipe-title">{{plato.nombre}}</h2>
+        <img class="recipe-image" [src]="plato.foto" *ngIf="plato.foto">
+        <h3 class="ingredients-title">Ingredientes:</h3>
+        <div class="recipe-ingredients" *ngFor= " let ingrediente of plato.ingredientes "> <!--Aca supongo que se podria hacer lo mismo que arriba con un ngFor, pero para el array
+        de ingrediente, por lo cual, cada elemento de la lista seria un ingrediente distinto -->
+          <ul>
+            <li>{{ingrediente.nombre}}</li>
+          </ul>
+        </div>
+        
+  
+            <a [routerLink]="['/recetas', plato.id]">Ver Recetas!</a>
+      
+      </div>
+    </div>
+

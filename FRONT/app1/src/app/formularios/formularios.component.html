@@ -1,0 +1,110 @@
+ <div class="body">
+  
+  <div class="form-container">
+
+    <div class="form-container">
+      <form class="form form-add" id="form-add" (ngSubmit)="onSubmit(plato.nombre)">
+        <h2>Añadir Plato</h2>
+        <label for="id-add">Id:</label>
+        <input type="number" id="id-add" name="id-add" [(ngModel)]="plato.id" required>
+        <label for="name-add">Nombre:</label>
+        <input type="text" id="name-add" name="name-add" [(ngModel)]="plato.nombre" required>
+
+        <label for="tipo-add">Tipo de plato:</label>
+        <input type="text" id="tipo-add" name="tipo-add" [(ngModel)]="plato.tipo" required>
+
+        <label for="receta-add">Receta:</label>
+        <input type="text" id="receta-add" name="receta-add" [(ngModel)]="plato.receta" required>
+
+        <label for="descripcion">Descripcion:</label>
+        <input type="text" id="descripcion" name="descripcion" [(ngModel)]="plato.descripcion" required>
+
+        <label for="foto-add">Foto:</label>
+        <input type="text" id="foto-add" name="foto-add" [(ngModel)]="plato.foto" required>
+
+
+        <label for="ingredientes-add">Ingredientes:</label>
+        <input type="text" id="ingredientes-filter" name="ingredientes-filter" placeholder="Buscar ingredientes"
+               [(ngModel)]="filtroIngredientes" (input)="filtrarResultados(filtroIngredientes)">
+        
+        <!-- Lista de resultados de ingredientes filtrados -->
+        <div *ngFor="let ingrediente of resultados">
+          <label (click)="agregarIngrediente(ingrediente)"> {{ ingrediente.nombre }}</label>
+        </div>
+        <div>
+          <h3>Ingredientes Seleccionados</h3>
+          <ul>
+            <li class ="item-ingredientesSeleccionados" *ngFor="let ingrediente of ingredientesSeleccionados">{{ ingrediente.nombre }}
+            <button class= "borrar-ingrediente" (click)="removeIngrediente(ingrediente)">X</button></li>
+            
+          </ul>
+        </div>
+
+        
+    
+        <button type="submit">Agregar Plato</button>
+    </form>
+    
+
+
+
+    <form class="form form-modify" id="form-modify">
+      <h2>Agregar Ingrediente</h2>
+      <label for="ingridient-name">Ingrediente nombre:</label>
+      <input type="text" id="ingridient-name" name="ingridient-name"  [(ngModel)]="ingrediente.nombre" required>
+      <label for="ingridient-description">Ingrediente descripcion:</label>
+      <input type="text" id="ingridient-description" name="ingridient-description"  [(ngModel)]="ingrediente.descripcion" required>
+      <label for="ingridient-amount">Ingrediente Cantidad:</label>
+      <input type="number" id="ingridient-ID" name="ingridient-ID" [(ngModel)]="ingrediente.cantidad" required>
+      <label for="Plate-id">ID del plato al que se le va agregar:</label>
+      <input type="number" id="Plate-id" name="Plate-id" [(ngModel)]="plato.id" required>
+      
+      <button (click)="addIng()">Agregar Ingrediente</button>
+    </form>
+
+
+
+    <form class="form form-delete" id="form-delete">
+      <h2>Delete Dish</h2>
+      <label for="id-delete">Id:</label>
+      <input type="number" id="id-delete" name="id-delete" [(ngModel)]="plato.id" required>
+      <button (click)="borrarPlato()">Delete </button>
+    </form>
+
+  
+      <form class="form form-update" id="form-update" (ngSubmit)="updatePlato(ingrediente.nombre)">
+        <h2>Modificar Plato</h2>
+        <label for="id-add">Id Plato a reemplazar:</label>
+        <input type="number" id="id-add" name="id-add" [(ngModel)]="plato.id" required>
+        <button type="button" (click)="buscarPlato(plato.id)">Buscar</button>
+        <div *ngIf = "buscar">
+          
+          <label for="id-replace">Nombre</label>
+          <input type="text" id="name-add" name="name-add" [(ngModel)]="plato.nombre" required>
+          <label for="ingredientes-add">Ingredientes:</label>
+          <input type="text" id="ingredientes-filter" name="ingredientes-filter" placeholder="Buscar ingredientes"
+               [(ngModel)]="filtroIngredientes" (input)="filtrarResultados(filtroIngredientes)">
+        
+        <!-- Lista de resultados de ingredientes filtrados -->
+            <div *ngFor="let ingrediente of resultados">
+          <label (click)="agregarIngrediente2(ingrediente)"> {{ ingrediente.nombre }}</label>
+        </div>
+        <div>
+          <h3>Ingredientes Seleccionados</h3>
+          <ul>
+
+            <li class ="item-ingredientesSeleccionados" *ngFor="let ingrediente of ingredientesPlatoUpdate">{{ ingrediente.nombre }}
+            <button class= "borrar-ingrediente" (click)="removeIngrediente2(ingrediente)">X</button></li>
+            
+          </ul>
+        </div>
+      
+        
+    
+        <button (click)="updatePlato(ingrediente.nombre)">Reemplazar Plato</button>
+      </div>
+      </form>
+    
+  </div>
+</div>
+</div >

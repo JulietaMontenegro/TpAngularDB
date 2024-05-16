@@ -1,0 +1,92 @@
+.body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  padding: 20px;
+  text-align: center; /* Alineación del contenido */
+  margin-top: 10%;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center; /* Centrar los formularios */
+  margin-top: 10px; /* Modificamos para dejar espacio */
+}
+
+.form {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 30%; /* Ancho original de cada formulario */
+  margin-right: 10px; /* Espacio entre formularios */
+}
+
+.form:last-child {
+  margin-right: 0; /* Quitamos el margen derecho del último formulario */
+}
+
+.form h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form input[type="text"],
+.form input[type="number"] {
+  width: calc(100% - 16px); /* Para compensar el padding y border */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+}
+
+.form button  {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.form button.borrar-ingrediente { 
+    background-color: #ff5555; /* Color de fondo rojo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 8px 16px; /* Espaciado interno */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    transition: background-color 0.3s; /* Transición suave */
+    font-family: Arial, sans-serif; /* Tipo de fuente */
+  
+  
+ 
+  
+}
+
+.form button.borrar-ingrediente:hover {
+  background-color: #ff0000; /* Cambia el color de fondo al pasar por encima */
+}
+.form button:hover {
+  background-color: #45a049;
+}
+
+
+@media (max-width: 768px) {
+  .form {
+      width: 45%; /* Reducimos el ancho de los formularios en pantallas más pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  .form {
+      width: 100%; /* Los formularios ocuparán todo el ancho en pantallas muy pequeñas */
+      margin-right: 0; /* Quitamos el margen derecho en pantallas pequeñas */
+  }
+}

@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+:root{
+color-scheme: dark;
+
+background: url('https://img.freepik.com/free-photo/mexican-dishes-pepper_23-2147740824.jpg?t=st=1712867378~exp=1712870978~hmac=07bb409381d6e666f1302aeafbee80634a671ed7f9e48d0ccf5cbb515326d36b&w=1480') no-repeat center fixed; ;
+background-size:cover;  
+background-position:center;
+width: 100%;
+height: 100%;
+
+html, body {
+    width:100%;
+    height: 100%;
+  }
+
+}
+

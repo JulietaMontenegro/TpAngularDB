@@ -1,0 +1,66 @@
+:root{
+    color-scheme: light dark;
+}
+
+body{
+min-height: 100vh;
+background: url('https://img.freepik.com/free-photo/mexican-dishes-pepper_23-2147740824.jpg?t=st=1712867378~exp=1712870978~hmac=07bb409381d6e666f1302aeafbee80634a671ed7f9e48d0ccf5cbb515326d36b&w=1480') no-repeat;
+background-size: cover; 
+background-position: center;
+
+}
+
+
+.header { 
+position:absolute;
+top: 0; 
+left: 0; 
+width: 100%;
+padding: 20px 100px;
+background: black;
+display: flex;
+justify-content: space-between;
+align-items: center;
+z-index: 100;
+font-style: bold italic;
+
+}
+
+
+.logo {
+    position: relative;
+height: 45px;
+margin-right: 0%;
+margin-left: -5%;
+}
+
+
+.navbar a{
+    position: relative;
+    font-size: 24px;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+    margin-right: 150px; ;
+}
+
+.navbar a::before{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: .3s;
+}
+
+.navbar a:hover::before{
+    width: 100%;
+
+}
+
+#platos{
+    cursor: pointer;
+}
