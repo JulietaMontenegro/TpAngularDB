@@ -2,10 +2,14 @@
 
 <div id="plato" *ngIf="plato">
     <div id="contenedorFondo">
-    <h1 id="nombre">{{ plato.nombre }}</h1>
-    <p id="textosPrincipales"> Tipo de plato: {{ plato.tipo }}</p>
-    <p id="textosPrincipales"> Receta: {{ plato.receta }}</p>
-    <p id="textosPrincipales"> {{ plato.receta }}</p>
+      <p id="tipo">{{ plato.tipo }}</p>
+      <h1 id="nombre">{{ plato.nombre }}</h1>
+      <img class="plato" src="{{plato.foto}}">
+      <p class="textos">{{ plato.descripcion }}</p>
+  
+      <p class="subtitulos"> Receta</p>
+      <p class="textosCuerpo">{{ plato.receta }}</p>
+      <img id="cocinero" src="/assets/receta.png">
     </div>
   </div>
   

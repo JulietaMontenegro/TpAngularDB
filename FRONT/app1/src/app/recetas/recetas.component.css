@@ -1,9 +1,18 @@
-
-
 #nombre{
     color: white;
-    font-size: 40px;
+    font-size: 80px;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-family: 'Titulos';
+    color: black;
 
+}
+
+#tipo{
+    font-size: 80% !important;
+    margin-top: 4%;
+    margin-bottom: 0;
+    color: black;
 }
 
 #tipo{
@@ -11,15 +20,64 @@
 }
 
 #contenedorFondo {
-    margin-top: 5%;
-    background-color: rgba(0, 0, 0, 0.452);
+    margin-top: 9%;
+    margin-bottom: 9%;
+    background-color: rgba(255, 255, 255, 0.644);
     padding: 2%;
+    padding-left: 6%;
+    padding-right: 6%;
     border-radius: 2%;
     width: 50%;
+    text-align: center;
+    color: black;
+    
 }
 
 #plato {
     justify-content: center;
     align-items: center;
     display: flex;
+}
+
+.textos{
+    font-family: 'textos';
+}
+.textosCuerpo{
+    font-family: 'textos';
+    font-weight: normal;
+    font-size: 20px;
+    margin-top: 0;
+}
+
+.subtitulos{
+    font-weight: bolder;
+    font-family: 'subtitulos';
+    font-size: 20px;
+    margin-bottom: 4%;
+    margin-top: 7%;
+}
+
+#cocinero{
+    height: 100px;
+    width: 100px;
+}
+
+.plato{
+    width: 500px;
+    height: 300px;
+    border-radius: 2% bv;
+}
+
+@font-face{
+    font-family: 'Titulos';
+    src: url("/assets/Titulos.ttf") format('truetype');
+}
+
+@font-face{
+    font-family: 'textos';
+    src: url("/assets/Sassy Raccoon.ttf") format('truetype');
+}
+@font-face{
+    font-family: 'subtitulos';
+    src: url("/assets/Amarillo.ttf") format('truetype');
 }
